@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #061426;
+    --bg-card: #081A2E;
+    --bg-card-hover: #0B2138;
+    --bg-card-alt: #102A43;
+    --border-subtle: #12365A;
+    --accent-blue: #1677FF;
+    --accent-green: #22C55E;
+    --accent-yellow: #FACC15;
+    --accent-orange: #F97316;
+    --accent-red: #EF4444;
+    --text-primary: #F8FAFC;
+    --text-muted: #94A3B8;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom command center utilities */
+.bg-command-main { background-color: #061426; }
+.bg-command-card { background-color: #081A2E; }
+.bg-command-card-hover:hover { background-color: #0B2138; }
+.bg-command-elevated { background-color: #0B2138; }
+.border-command { border-color: #12365A; }
+.border-command-accent { border-color: #1677FF; }
+
+/* Custom Glow & Pulse Effects */
+.glow-red {
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.35);
+}
+.glow-orange {
+  box-shadow: 0 0 15px rgba(249, 115, 22, 0.35);
+}
+.glow-blue {
+  box-shadow: 0 0 15px rgba(22, 119, 255, 0.35);
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #061426;
+}
+::-webkit-scrollbar-thumb {
+  background: #12365A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1677FF;
+}
+
+/* Leaflet Map Dark Styling Overrides */
+.leaflet-container {
+  background: #061426 !important;
+  font-family: inherit;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+.leaflet-popup-content-wrapper {
+  background: #0B2138 !important;
+  color: #F8FAFC !important;
+  border: 1px solid #1677FF;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.8);
+}
+.leaflet-popup-tip {
+  background: #0B2138 !important;
+}
+.leaflet-control-zoom a {
+  background-color: #081A2E !important;
+  color: #F8FAFC !important;
+  border-color: #12365A !important;
+}
+.leaflet-control-zoom a:hover {
+  background-color: #102A43 !important;
+  color: #1677FF !important;
+}
